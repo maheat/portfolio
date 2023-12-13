@@ -236,6 +236,17 @@ h1{
     color: whitesmoke;
     font-size: 50px;
 }
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    #parallax-image1,
+    #parallax-image2,
+    #parallax-image3,
+    #parallax-image4,
+    #parallax-image5 {
+        height: 300px; /* Adjust the height as needed for smaller screens */
+        margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+}
 /* PARALLAX IMAGES END*/
 
 /* TEXT */
