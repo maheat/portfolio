@@ -427,16 +427,6 @@ overflow-x: hidden;
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 1024px) {
-    .gallery-item {
-        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
-        margin: 0 auto;
-    }
-    .gallery-item2 {
-        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
-        margin: 0 auto;
-    }
-}
 @media screen and (max-width: 768px) {
     .gallery-item {
         flex: 0 0 100%; /* Make each item take up 100% width on smaller screens */
