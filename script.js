@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
     big_title.style.opacity = - scroll / (header_height / 2) + 1;
 })
 
-
+// Javascript to generate a slideshow for the image gallery when you click on it
 let slideIndex = 1;
 
 function openModal() {
