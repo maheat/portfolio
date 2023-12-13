@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-/*     overflow-x: hidden;   */
+    /* overflow-x: hidden;   */
 }
 /* NAV BAR */
 .navigation{
@@ -54,7 +54,7 @@ li {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .navigation {
         width: 90%; /* Adjust width for smaller screens */
         flex-wrap: wrap;
@@ -145,7 +145,7 @@ header:after{
     }
 }
 
-@media(max-width: 600px){
+@media(max-width: 768px){
     .big-title{
         font-size: 3rem
     }
@@ -237,13 +237,13 @@ h1{
     font-size: 50px;
 }
 /* Media query for smaller screens */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     #parallax-image1,
     #parallax-image2,
     #parallax-image3,
     #parallax-image4,
     #parallax-image5 {
-        height: 300px; /* Adjust the height as needed for smaller screens */
+        height: auto; /* Adjust the height as needed for smaller screens */
         margin-bottom: 20px; /* Adjust the margin as needed */
     }
 }
@@ -327,11 +327,11 @@ transform: scale(1.05);
 }
 
 /* Responsive layout - makes a single column layout instead of two columns on small screens */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
 .column {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    max-width: 100%;
+    width: 100%;
 }
 }
 /*WEBSITE ENDS  */
@@ -655,7 +655,7 @@ input[type=text], select, textarea {
 }
 
 /* Media query for smaller screens */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .footer-col {
         width: 100%;
         margin-bottom: 30px;
