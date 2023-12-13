@@ -236,6 +236,17 @@ h1{
     color: whitesmoke;
     font-size: 50px;
 }
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    #parallax-image1,
+    #parallax-image2,
+    #parallax-image3,
+    #parallax-image4,
+    #parallax-image5 {
+        height: 300px; /* Adjust the height as needed for smaller screens */
+        margin-bottom: 20px; /* Adjust the margin as needed */
+    }
+}
 /* PARALLAX IMAGES END*/
 
 /* TEXT */
@@ -347,7 +358,7 @@ overflow-x: hidden;
 
 .gallery-item {
     flex: 0 0 calc(33.3333% - 40px); /* Adjust the width based on your preference */
-    margin: 10px -30px;
+    margin: 10px -10px;
     cursor: pointer;
 }
 
@@ -427,6 +438,16 @@ overflow-x: hidden;
 }
 
 /* Media query for smaller screens */
+@media screen and (max-width: 1024px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
+        margin: 0 auto;
+    }
+    .gallery-item2 {
+        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 768px) {
     .gallery-item {
         flex: 0 0 100%; /* Make each item take up 100% width on smaller screens */
