@@ -1,0 +1,659 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box;
+    stroke: none; */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;  
+}
+/* NAV BAR */
+.navigation{
+    position: fixed;
+    width: 80%;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 39px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    overflow-x: hidden;
+    background-color: #000000;
+    border-radius: 20px;
+    font-family: Comic Sans MS, Comic Sans;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: rgb(145, 197, 197);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover{
+    background-color: #333;
+    color:rgb(145, 197, 197);
+}
+
+ ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+
+li {
+    display: inline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .navigation {
+        width: 90%; /* Adjust width for smaller screens */
+        flex-wrap: wrap;
+        
+    }
+
+    .navigation a {
+        padding: 8px; /* Adjust padding for smaller screens */
+        margin: 0 3px; /* Adjust margin for smaller screens */
+    }
+}
+/* NAV BAR ENDS*/
+
+/* HEADER & MAIN */
+section {
+    padding: 50px;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+header:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: 25;
+}
+
+.container1 {
+    position: relative; /* Set position relative for child absolute positioning */
+    width: 100vw; /* Set your desired width */
+    height: 100vh; /* Set your desired height */
+    border: 2px solid #333; /* Add border for visualization */
+    background-color:  rgb(255, 255, 255);
+}
+
+/* Styling for each image layer */
+.container1 img {
+    position: absolute; /* Position images relative to the container */
+    width: 100%; /* Make images take up the full width of the container */
+    height: 100%; /* Make images take up the full height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Adjust the z-index to control the layering of images */
+.container1 .right { z-index: 3; }
+.container1 .left { z-index: 2; }
+.container1 .back { z-index: 1; }
+.container1 .bottom { z-index: 3; }
+
+.big-title{
+    position: absolute;
+    z-index: 30;
+    line-height: 4rem;
+    top: calc(50% - 2rem);
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.small-title{
+    position: absolute;
+    z-index: 30;
+    line-height: 4rem;
+    top: calc(55% - 1rem);
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 5;
+    color: #fff;
+    font-family:  Comic Sans;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 850px){
+    section .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 600px){
+    .big-title{
+        font-size: 3rem
+    }
+
+    .text{
+        font-size: .8rem;
+    }
+
+    .title{
+        font-size: 1.2rem;
+    }
+}
+/* HEADER & MAIN ENDS */
+
+/* PARALLAX IMAGES */
+#parallax-image1{
+    position: relative;
+    background-image: url("img/parallax/1.jpg");
+    height: 500px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;   
+}
+#parallax-image2{
+    position: relative;
+    background-image: url("img/parallax/2.jpg");
+    height: 500px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#parallax-image3{
+    position: relative;
+    background-image: url("img/parallax/3.jpg");
+    height: 500px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#parallax-image4{
+    position: relative;
+    background-image: url("img/parallax/4.jpg");
+    height: 500px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#parallax-image5{
+    position: relative;
+    background-image: url("img/parallax/5.png");
+    height: 500px;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    transform: translateY(-50%);
+    width: auto; /* Adjust the width to control the size of the rectangular box */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.quote-text {
+    font-size: 24px;
+    z-index: 30;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1{
+    font-family: Comic Sans MS, Comic Sans;
+    color: whitesmoke;
+    font-size: 50px;
+}
+/* PARALLAX IMAGES END*/
+
+/* TEXT */
+.text-container {
+    background-color: rgb(255, 255, 255); /* Set your desired background color */
+    text-align: center;
+}
+
+.text-details {
+    max-width: 800px; /* Adjust max width as needed */
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Comic Sans MS, Comic Sans;
+    color: #000000;
+}
+
+.text-section {
+    margin-bottom: 30px;
+    
+}
+
+.text-title {
+    font-size: 40px; /* Set your desired font size */
+    /* Add more styling properties if needed */
+}
+
+.text-subtitle {
+    font-size: 30px; /* Set your desired font size */
+    /* Add more styling properties if needed */
+}
+
+.text-link{
+    font-family:Comic Sans; 
+    color:rgb(76, 113, 77);
+}
+
+.text-link:hover{ /* Hover for clicking the text links */
+    transform: scale(1.1);  
+    color: rgb(0, 0, 0);
+}
+/* TEXT ENDS */
+
+/* WEBSITE */
+.website-container {
+box-sizing: border-box;
+align-items: center;
+stroke: none;
+margin: 0 auto; /* Center the container horizontally */
+max-width: 800px;
+padding: 0 16px; /* Add padding to the container */
+background-color: rgb(255, 255, 255);
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Distribute columns with equal space between them */
+margin: -20px -20px 30px; /* top, l/r, bottom */
+}
+
+/* Create two equal columns that sit next to each other */
+.column {
+-ms-flex: 0 0 45%;
+flex: 0 0 45%;
+max-width: 45%;
+padding: 10px 8px; /* Add padding to each column */
+}
+
+.column img {
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
+border-radius: 8px;
+}
+
+.column img:hover {
+transform: scale(1.05);
+}
+
+/* Responsive layout - makes a single column layout instead of two columns on small screens */
+@media screen and (max-width: 800px) {
+.column {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}
+/*WEBSITE ENDS  */
+
+/* GALLERY */
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 0 20px; /* Adjust margin on the left and right sides */
+background-color: rgb(255, 255, 255);
+margin-bottom: 40px;
+overflow-x: hidden;
+}
+.gallery2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px; /* Adjust margin on the left and right sides */
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    overflow-x: hidden;
+    }
+
+.gallery-item {
+    flex: 0 0 calc(33.3333% - 40px); /* Adjust the width based on your preference */
+    margin: 10px -30px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item2 {
+    flex: 0 0 calc(33.3333% - 40px); /* Adjust the width based on your preference */
+    margin: 10px -45px;
+    cursor: pointer;
+}
+
+.gallery-item2 img {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item2 img:hover {
+    transform: scale(1.1);
+}
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Enlarged image modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 15px;
+}
+
+.arrow.right {
+    right: 15px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1024px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
+        margin: 0 auto;
+    }
+    .gallery-item2 {
+        flex: 0 0 calc(50% - 40px); /* Two items in each row with a gap of 40px */
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 100%; /* Make each item take up 100% width on smaller screens */
+        margin: 0 auto;
+    }
+    .gallery-item2 {
+        flex: 0 0 100%; /* Make each item take up 100% width on smaller screens */
+        margin: 0 auto;
+    }
+
+}
+/* GALLERY ENDS */
+/* PROJECT */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text ul {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+span {
+    color: rgb(145, 197, 197);
+}
+
+.code-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    max-height: 400px; /* Limit the maximum height of the image */
+}
+/* PROJECT ENDS */
+
+/* ABOUT ME*/
+#about {
+    padding: 100px 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 800px;
+    font-family:  Comic Sans MS, Comic Sans;
+    text-align: left;
+    margin-left: 80px; /* Add margin to the right of the text */
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.about-text h5 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+}
+
+span {
+    color: rgb(145, 197, 197);
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #777;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100px;
+    margin-top: 20px;
+    max-height: 400px; /* Limit the maximum height of the image */
+}
+
+
+/* Media Query for About Me Section */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 50px 0;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center; /* Center-align text on smaller screens */
+        margin: 30px 0;
+    }
+}
+/* ABOUT ME ENDS*/
+
+/* CONTACT */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 30%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 2px solid rgb(0, 0, 0); /* Gray border */
+    border-radius: 10px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:Comic Sans MS, Comic Sans ;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: rgb(145, 197, 197);
+  }
+  
+  /* Add a background color and some padding around the form */
+  .contact-container {
+    border-radius: 5px;
+    margin: 0 auto; /* Center the container */
+    background-color: #ffffff;
+    padding: 20px;
+    font-family:Comic Sans MS, Comic Sans ;
+    
+  }
+/* CONTACT ENDS */
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    bottom: 0;
+    background-color: #18363d;
+    padding: 30px 0;
+    text-align: center; /* Center text and links */
+    font-family: Comic Sans MS, Comic Sans;
+}
+
+.footer-col {
+    width: 70%;
+    padding: 0 15px;
+    display: inline-block; /* Display .footer-col in a line */
+    text-align: center;
+    margin: 0 auto; /* Center .footer-col horizontally */
+    
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+    margin: 0 auto;
+}
+.footer-col h3 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+/* FOOTER ENDS */
